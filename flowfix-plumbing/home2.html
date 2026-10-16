@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home 2 | FlowFix Plumbing Co. — Book a Plumbing Service</title>
+  <meta name="description" content="Small leak or major blockage — FlowFix Plumbing Co. helps you book the right plumbing service for repairs, maintenance, and urgent issues.">
+  <script>
+    (function(){try{var t=localStorage.getItem('site-theme');if(t==='dark'){document.documentElement.classList.add('dark');}else if(t!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.classList.add('dark');}var d=localStorage.getItem('site-direction');if(d==='rtl'){document.documentElement.setAttribute('dir','rtl');}}catch(e){}})();
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0F766E', 'primary-dark': '#0B5F59', 'primary-light': '#14B8A6',
+            secondary: '#F59E0B', 'secondary-dark': '#D97706',
+            surface: '#F8FAFC', ink: '#1E293B', accent: '#DCEFEA',
+            darkbg: '#102A2A', darksurface: '#193B3A', darktext: '#F8FAFC'
+          },
+          fontFamily: { heading: ['Manrope','system-ui','sans-serif'], body: ['Inter','system-ui','sans-serif'] },
+          maxWidth: { '8xl': '88rem' }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/logo/flowfix-logo.svg" type="image/svg+xml">
+</head>
+<body class="font-body bg-surface text-ink dark:bg-darkbg dark:text-darktext antialiased">
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div id="navbar"></div>
+
+  <main id="main">
+
+    <!-- ============ Section 1: Editorial Split Hero ============ -->
+    <section class="hero-full bg-white dark:bg-darkbg" aria-labelledby="hero2-heading">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow mb-4">
+              <span class="w-8 h-0.5 bg-primary dark:bg-primary-light rounded" aria-hidden="true"></span>
+              FlowFix Plumbing Co.
+            </p>
+            <h1 id="hero2-heading" class="text-4xl sm:text-5xl lg:text-[3.2rem] leading-[1.13] font-heading font-extrabold text-ink dark:text-darktext mb-5">
+              Small Leak or Major Blockage? <span class="text-primary dark:text-primary-light">We're Ready to Help.</span>
+            </h1>
+            <p class="text-lg text-slate-600 dark:text-slate-300 max-w-lg mb-8 leading-relaxed">
+              Practical plumbing solutions for repairs, maintenance, and urgent plumbing issues — booked around your schedule.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-10">
+              <a href="#book-service" class="btn btn-primary btn-lg">Request a Booking</a>
+              <a href="emergency.html" class="btn btn-emergency btn-lg">Emergency Plumbing</a>
+            </div>
+            <dl class="grid grid-cols-3 gap-4 max-w-md border-t border-slate-200 dark:border-[#2A5250] pt-7">
+              <div>
+                <dt class="text-xs text-slate-500 dark:text-slate-400 font-medium mb-1">Services</dt>
+                <dd class="font-heading font-extrabold text-xl text-primary dark:text-primary-light">4 Core</dd>
+              </div>
+              <div>
+                <dt class="text-xs text-slate-500 dark:text-slate-400 font-medium mb-1">Approach</dt>
+                <dd class="font-heading font-extrabold text-xl text-primary dark:text-primary-light">Upfront</dd>
+              </div>
+              <div>
+                <dt class="text-xs text-slate-500 dark:text-slate-400 font-medium mb-1">Booking</dt>
+                <dd class="font-heading font-extrabold text-xl text-primary dark:text-primary-light">Easy</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="hero-img-wrap">
+            <img src="images/hero/plumber-at-work.jpg" alt="FlowFix plumber at work on residential pipework" width="800" height="560" class="w-full h-[300px] sm:h-[400px] lg:h-full lg:min-h-[460px] object-cover" fetchpriority="high">
+            <div class="hero-badge-float" role="status">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              <div>
+                <p class="font-heading font-extrabold text-sm text-ink dark:text-darktext leading-tight">Subject to availability</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Emergency &amp; standard bookings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+
+    <!-- ============ Section 2: Quick Service Selector ============ -->
+    <section class="section section-soft" id="book-service" aria-labelledby="selector-heading">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <p class="eyebrow mb-3">Start Here</p>
+          <h2 id="selector-heading" class="section-title text-ink dark:text-darktext mb-3">What's the Problem?</h2>
+          <p class="section-lead mx-auto">Choose the option that best matches your situation. We'll point you to the right service and booking path.</p>
+        </div>
+
+        <div id="service-selector" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-8">
+          <button type="button" class="service-option is-selected" data-service="pipe" aria-pressed="true">
+            <div class="icon-badge mb-3" aria-hidden="true">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-ink dark:text-darktext mb-1">Leaking Pipe</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Drips, damp patches, or joint leaks</p>
+          </button>
+
+          <button type="button" class="service-option" data-service="drain" aria-pressed="false">
+            <div class="icon-badge mb-3" aria-hidden="true">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v3m0 12v3M3 12h3m12 0h3M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-ink dark:text-darktext mb-1">Blocked Drain</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Slow drainage or standing water</p>
+          </button>
+
+          <button type="button" class="service-option" data-service="tap" aria-pressed="false">
+            <div class="icon-badge mb-3" aria-hidden="true">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-ink dark:text-darktext mb-1">Faulty Tap</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Dripping or worn fixtures</p>
+          </button>
+
+          <button type="button" class="service-option" data-service="tank" aria-pressed="false">
+            <div class="icon-badge mb-3" aria-hidden="true">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M12 3v9m0 0l-2.5-2.5M12 12l2.5-2.5"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-ink dark:text-darktext mb-1">Tank Cleaning</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Scheduled tank maintenance</p>
+          </button>
+        </div>
+
+        <div class="card card-flat p-7 md:p-9 max-w-3xl mx-auto" id="selector-detail">
+          <div class="flex flex-col md:flex-row md:items-center gap-6 justify-between">
+            <div>
+              <h3 id="selector-title" class="font-heading font-extrabold text-xl text-ink dark:text-darktext mb-2">Leaking Pipe</h3>
+              <p id="selector-desc" class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">Visible drips, damp patches, or joint leaks often need prompt pipe repair. We inspect the affected line, explain the cause, and confirm an estimate before work begins.</p>
+            </div>
+            <a id="selector-link" href="services.html#pipe-repair" class="btn btn-primary shrink-0" aria-label="Book Pipe Repair">
+              <span data-link-label>Book Pipe Repair</span>
+              <svg class="w-4 h-4 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Section 3: Common Plumbing Problems ============ -->
+    <section class="section section-alt" aria-labelledby="problems-heading">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mb-12">
+          <p class="eyebrow mb-3">Common Issues</p>
+          <h2 id="problems-heading" class="section-title text-ink dark:text-darktext mb-4">Household Plumbing Problems We Handle</h2>
+          <p class="section-lead">Match a symptom to the right service category — or book an inspection if you're unsure.</p>
+        </div>
+        <div class="grid problems-grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="card p-6 fade-up flex flex-col">
+            <div class="flex items-start gap-4 flex-1">
+              <span class="icon-badge icon-badge-amber shrink-0" aria-hidden="true">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M5.07 19h13.86a2 2 0 001.74-3L13.74 4a2 2 0 00-3.48 0L3.34 16a2 2 0 001.73 3z"/></svg>
+              </span>
+              <div class="flex flex-1 flex-col self-stretch">
+                <h3 class="font-heading font-bold text-ink dark:text-darktext mb-1">Water pooling under the sink</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300 mb-2">Often a trap, joint, or supply-line issue.</p>
+                <a href="services.html#pipe-repair" class="link-arrow text-sm mt-auto">→ Pipe Repair</a>
+              </div>
+            </div>
+          </article>
+          <article class="card p-6 fade-up flex flex-col" style="transition-delay:50ms">
+            <div class="flex items-start gap-4 flex-1">
+              <span class="icon-badge icon-badge-amber shrink-0" aria-hidden="true">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M5.07 19h13.86a2 2 0 001.74-3L13.74 4a2 2 0 00-3.48 0L3.34 16a2 2 0 001.73 3z"/></svg>
+              </span>
+              <div class="flex flex-1 flex-col self-stretch">
+                <h3 class="font-heading font-bold text-ink dark:text-darktext mb-1">Sink drains very slowly</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300 mb-2">Build-up in the drain or trap is common.</p>
+                <a href="services.html#drain-unblocking" class="link-arrow text-sm mt-auto">→ Drain Unblocking</a>
+              </div>
+            </div>
+          </article>
+          <article class="card p-6 fade-up flex flex-col" style="transition-delay:100ms">
+            <div class="flex items-start gap-4 flex-1">
+              <span class="icon-badge icon-badge-amber shrink-0" aria-hidden="true">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M5.07 19h13.86a2 2 0 001.74-3L13.74 4a2 2 0 00-3.48 0L3.34 16a2 2 0 001.73 3z"/></svg>
+              </span>
+              <div class="flex flex-1 flex-col self-stretch">
+                <h3 class="font-heading font-bold text-ink dark:text-darktext mb-1">Tap drips constantly</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300 mb-2">Worn washers or cartridges are frequent causes.</p>
+                <a href="services.html#tap-replacement" class="link-arrow text-sm mt-auto">→ Tap Replacement</a>
+              </div>
+            </div>
+          </article>
+          <article class="card p-6 fade-up flex flex-col" style="transition-delay:150ms">
+            <div class="flex items-start gap-4 flex-1">
+              <span class="icon-badge icon-badge-amber shrink-0" aria-hidden="true">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M5.07 19h13.86a2 2 0 001.74-3L13.74 4a2 2 0 00-3.48 0L3.34 16a2 2 0 001.73 3z"/></svg>
+              </span>
+              <div class="flex flex-1 flex-col self-stretch">
+                <h3 class="font-heading font-bold text-ink dark:text-darktext mb-1">Low water pressure at fixtures</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300 mb-2">May relate to aerators, valves, or supply lines.</p>
+                <a href="services.html#general" class="link-arrow text-sm mt-auto">→ General Plumbing</a>
+              </div>
+            </div>
+          </article>
+          <article class="card p-6 fade-up flex flex-col" style="transition-delay:200ms">
+            <div class="flex items-start gap-4 flex-1">
+              <span class="icon-badge icon-badge-amber shrink-0" aria-hidden="true">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M5.07 19h13.86a2 2 0 001.74-3L13.74 4a2 2 0 00-3.48 0L3.34 16a2 2 0 001.73 3z"/></svg>
+              </span>
+              <div class="flex flex-1 flex-col self-stretch">
+                <h3 class="font-heading font-bold text-ink dark:text-darktext mb-1">Unusual tank sediment or odour</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300 mb-2">A tank inspection can identify cleaning needs.</p>
+                <a href="services.html#tank-cleaning" class="link-arrow text-sm mt-auto">→ Tank Cleaning</a>
+              </div>
+            </div>
+          </article>
+          <article class="card p-6 fade-up flex flex-col" style="transition-delay:250ms">
+            <div class="flex items-start gap-4 flex-1">
+              <span class="icon-badge shrink-0" aria-hidden="true">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </span>
+              <div class="flex flex-1 flex-col self-stretch">
+                <h3 class="font-heading font-bold text-ink dark:text-darktext mb-1">Sudden gush of water</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300 mb-2">May need urgent attention — see emergency guidance.</p>
+                <a href="emergency.html" class="link-arrow text-sm mt-auto">→ Emergency Plumbing</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Section 4: Transparent Service Process ============ -->
+    <section class="section" aria-labelledby="process2-heading">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <p class="eyebrow mb-3">No Surprises</p>
+          <h2 id="process2-heading" class="section-title text-ink dark:text-darktext mb-4">A Transparent Service Process</h2>
+          <p class="section-lead mx-auto">You always know what's happening, what it involves, and what happens next.</p>
+        </div>
+        <ol class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+          <li class="card p-6 text-center fade-up">
+            <span class="step-num mx-auto mb-4">1</span>
+            <h3 class="font-heading font-bold text-sm text-ink dark:text-darktext mb-2">Inspection</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">We examine the problem area and identify the likely cause.</p>
+          </li>
+          <li class="card p-6 text-center fade-up" style="transition-delay:50ms">
+            <span class="step-num mx-auto mb-4">2</span>
+            <h3 class="font-heading font-bold text-sm text-ink dark:text-darktext mb-2">Estimate</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">You receive a clear estimate covering the proposed work.</p>
+          </li>
+          <li class="card p-6 text-center fade-up" style="transition-delay:100ms">
+            <span class="step-num mx-auto mb-4">3</span>
+            <h3 class="font-heading font-bold text-sm text-ink dark:text-darktext mb-2">Approval</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">Work begins only after you confirm the estimate.</p>
+          </li>
+          <li class="card p-6 text-center fade-up" style="transition-delay:150ms">
+            <span class="step-num mx-auto mb-4">4</span>
+            <h3 class="font-heading font-bold text-sm text-ink dark:text-darktext mb-2">Repair</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">We complete the work carefully with tidy practices.</p>
+          </li>
+          <li class="card p-6 text-center fade-up" style="transition-delay:200ms">
+            <span class="step-num mx-auto mb-4">5</span>
+            <h3 class="font-heading font-bold text-sm text-ink dark:text-darktext mb-2">Completion</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">We walk you through the result before leaving.</p>
+          </li>
+        </ol>
+        <p class="info-box mt-10 max-w-3xl mx-auto text-center sm:text-start">If additional work is discovered during the job, we stop and discuss it with you before proceeding — no unapproved extras.</p>
+      </div>
+    </section>
+
+    <!-- ============ Section 5: Featured Services ============ -->
+    <section class="section section-alt" aria-labelledby="featured-heading">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div class="max-w-xl">
+            <p class="eyebrow mb-3">Core Services</p>
+            <h2 id="featured-heading" class="section-title text-ink dark:text-darktext mb-3">Featured Services</h2>
+            <p class="section-lead">Our most-requested plumbing services for homes and properties.</p>
+          </div>
+          <a href="services.html" class="link-arrow shrink-0">All services
+            <svg class="w-4 h-4 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="card overflow-hidden fade-up group">
+            <div class="h-44 overflow-hidden">
+              <img src="images/pipe-repair/pipe-leak-repair.jpg" alt="Exposed pipework being repaired by a plumber" loading="lazy" width="600" height="400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            </div>
+            <div class="p-5">
+              <h3 class="font-heading font-bold mb-1.5 text-ink dark:text-darktext">Pipe Repair</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">Leaking, damaged, or noisy pipes.</p>
+              <a href="services.html#pipe-repair" class="link-arrow text-sm">Learn More →</a>
+            </div>
+          </article>
+          <article class="card overflow-hidden fade-up group" style="transition-delay:60ms">
+            <div class="h-44 overflow-hidden">
+              <img src="images/drain-cleaning/drain-cleaning.jpg" alt="Clean modern bathroom drain area" loading="lazy" width="600" height="400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            </div>
+            <div class="p-5">
+              <h3 class="font-heading font-bold mb-1.5 text-ink dark:text-darktext">Drain Unblocking</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">Clearing blocked and slow drains.</p>
+              <a href="services.html#drain-unblocking" class="link-arrow text-sm">Learn More →</a>
+            </div>
+          </article>
+          <article class="card overflow-hidden fade-up group" style="transition-delay:120ms">
+            <div class="h-44 overflow-hidden">
+              <img src="images/tap-replacement/modern-tap.jpg" alt="Modern bathroom tap fixture" loading="lazy" width="600" height="400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            </div>
+            <div class="p-5">
+              <h3 class="font-heading font-bold mb-1.5 text-ink dark:text-darktext">Tap Replacement</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">Fix or upgrade dripping taps.</p>
+              <a href="services.html#tap-replacement" class="link-arrow text-sm">Learn More →</a>
+            </div>
+          </article>
+          <article class="card overflow-hidden fade-up group" style="transition-delay:180ms">
+            <div class="h-44 overflow-hidden">
+              <img src="images/tank-cleaning/water-tank.jpg" alt="Residential water tank ready for cleaning service" loading="lazy" width="600" height="400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            </div>
+            <div class="p-5">
+              <h3 class="font-heading font-bold mb-1.5 text-ink dark:text-darktext">Tank Cleaning</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">Scheduled tank cleaning &amp; checks.</p>
+              <a href="services.html#tank-cleaning" class="link-arrow text-sm">Learn More →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Section 6: FAQ ============ -->
+    <section class="section" aria-labelledby="faq2-heading">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center mb-10">
+          <p class="eyebrow mb-3">Questions</p>
+          <h2 id="faq2-heading" class="section-title text-ink dark:text-darktext mb-4">Frequently Asked Questions</h2>
+          <p class="section-lead mx-auto">Quick answers to common booking and service questions.</p>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-3" data-faq-group>
+          <div class="faq-item">
+            <h3>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq2-a1" id="faq2-q1">
+                How quickly can someone come out?
+                <span class="faq-icon" aria-hidden="true"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq2-a1" role="region" aria-labelledby="faq2-q1">
+              <div class="faq-answer-inner">Response and arrival times depend on current demand, location, and the nature of the job. Contact us with details and we'll confirm the earliest available slot subject to scheduling.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq2-a2" id="faq2-q2">
+                Will I know the cost before work starts?
+                <span class="faq-icon" aria-hidden="true"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq2-a2" role="region" aria-labelledby="faq2-q2">
+              <div class="faq-answer-inner">Yes — we provide an estimate covering the proposed work before starting. If additional issues are found during the job, we discuss them and get your approval before proceeding.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq2-a3" id="faq2-q3">
+                What areas do you cover?
+                <span class="faq-icon" aria-hidden="true"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq2-a3" role="region" aria-labelledby="faq2-q3">
+              <div class="faq-answer-inner">Our service area is listed as an editable placeholder on the contact and emergency pages. Update those sections with your real coverage locations before publishing.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq2-a4" id="faq2-q4">
+                Can I book online?
+                <span class="faq-icon" aria-hidden="true"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq2-a4" role="region" aria-labelledby="faq2-q4">
+              <div class="faq-answer-inner">You can submit a booking enquiry through the contact page form, or call us directly. This demo form validates your details but does not send to a backend — connect it to your system for live bookings.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq2-a5" id="faq2-q5">
+                Do you handle emergency callouts?
+                <span class="faq-icon" aria-hidden="true"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq2-a5" role="region" aria-labelledby="faq2-q5">
+              <div class="faq-answer-inner">We handle urgent plumbing issues subject to availability. Visit the Emergency page for guidance on what to do first and how to request urgent help.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Section 7: Dedicated CTA ============ -->
+    <section class="cta-band py-16 md:py-20 relative" aria-labelledby="cta2-heading">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 id="cta2-heading" class="text-3xl sm:text-4xl font-heading font-extrabold text-white mb-4">Let's Find the Right Fix.</h2>
+          <p class="text-lg text-white/85 mb-8 max-w-xl mx-auto">Book a plumber or check our pricing guide to understand typical cost factors before you commit.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="contact.html" class="btn btn-lg bg-white text-primary hover:bg-accent shadow-lg">Book a Plumber</a>
+            <a href="pricing.html" class="btn btn-outline-light btn-lg">See Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
