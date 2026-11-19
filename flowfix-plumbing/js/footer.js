@@ -12,13 +12,9 @@
 
   var year = new Date().getFullYear();
 
-  var logoSvg =
-    '<svg class="w-10 h-10" viewBox="0 0 64 64" fill="none" aria-hidden="true" focusable="false">' +
-    '<circle cx="32" cy="32" r="30" fill="#14B8A6"/>' +
-    '<path d="M32 14c-8 10-14 17.5-14 24a14 14 0 0028 0c0-6.5-6-14-14-24z" fill="#F8FAFC"/>' +
-    '<path d="M32 26c-4.5 6-7.5 10-7.5 13.5a7.5 7.5 0 0015 0C39.5 36 36.5 32 32 26z" fill="#5EEAD4"/>' +
-    '<path d="M26 44h12" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>' +
-    '</svg>';
+  // Same refined mark as the navbar and favicon — one asset, no drift.
+  var logoMark =
+    '<img src="images/logo/flowfix-logo.svg" class="ff-logo ff-logo-footer" alt="" aria-hidden="true">';
 
   var phoneIcon =
     '<svg class="w-4 h-4 mt-0.5 shrink-0 opacity-80" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.08 4.18 2 2 0 014.07 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>';
@@ -34,16 +30,16 @@
 
   var markup =
     '<footer class="site-footer" role="contentinfo">' +
-      '<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-16">' +
+      '<div class="ff-container py-14 md:py-16">' +
         '<div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">' +
 
           /* Brand */
           '<div class="sm:col-span-2 lg:col-span-1">' +
-            '<div class="flex items-center gap-3 mb-4">' +
-              logoSvg +
-              '<div class="leading-tight">' +
-                '<p class="font-heading font-extrabold text-lg text-white">FlowFix</p>' +
-                '<p class="text-[0.7rem] font-semibold tracking-wider uppercase text-[#5EEAD4]">Plumbing Co.</p>' +
+            '<div class="ff-brand mb-4">' +
+              logoMark +
+              '<div>' +
+                '<p class="ff-brand-name">FlowFix</p>' +
+                '<p class="ff-brand-sub">Plumbing Co.</p>' +
               '</div>' +
             '</div>' +
             '<p class="text-sm font-semibold text-[#FBBF24] mb-2">Fast Response. Reliable Repairs. Peace of Mind.</p>' +
@@ -114,7 +110,7 @@
 
       /* Bottom bar */
       '<div class="border-t border-white/10">' +
-        '<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm">' +
+        '<div class="ff-container py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm">' +
           '<p class="opacity-75">&copy; <span id="footer-year">' + year + '</span> FlowFix Plumbing Co. All rights reserved.</p>' +
           '<div class="flex gap-5">' +
             '<a href="#" class="opacity-75 hover:opacity-100">Privacy Policy</a>' +

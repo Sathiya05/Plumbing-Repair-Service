@@ -34,13 +34,9 @@
     return currentPage() === page ? ' is-active' : '';
   }
 
-  var logoSvg =
-    '<svg class="w-9 h-9 shrink-0" viewBox="0 0 64 64" fill="none" aria-hidden="true" focusable="false">' +
-    '<circle cx="32" cy="32" r="30" fill="#0F766E"/>' +
-    '<path d="M32 14c-8 10-14 17.5-14 24a14 14 0 0028 0c0-6.5-6-14-14-24z" fill="#F8FAFC"/>' +
-    '<path d="M32 26c-4.5 6-7.5 10-7.5 13.5a7.5 7.5 0 0015 0C39.5 36 36.5 32 32 26z" fill="#5EEAD4"/>' +
-    '<path d="M26 44h12" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>' +
-    '</svg>';
+  // The mark is maintained once in images/logo/flowfix-logo.svg (also the favicon).
+  var logoMark =
+    '<img src="images/logo/flowfix-logo.svg" class="ff-logo ff-logo-header" alt="" aria-hidden="true">';
 
   var sunIcon =
     '<svg class="icon-sun w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' +
@@ -64,15 +60,15 @@
   var markup =
     '<header class="site-navbar" id="site-navbar">' +
       '<div class="navbar-surface">' +
-      '<nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">' +
+      '<nav class="ff-container" aria-label="Main navigation">' +
         '<div class="flex items-center justify-between" style="min-height:var(--ff-navbar-h)">' +
 
           /* Logo */
-          '<a href="index.html" class="flex items-center gap-2.5 shrink-0 group" aria-label="FlowFix Plumbing Co. home">' +
-            logoSvg +
-            '<span class="leading-tight">' +
-              '<span class="block font-heading font-extrabold text-lg text-[#1E293B] dark:text-[#F8FAFC] group-hover:text-[#0F766E] dark:group-hover:text-[#5EEAD4] transition-colors">FlowFix</span>' +
-              '<span class="block text-[0.68rem] font-semibold tracking-wider uppercase text-[#0F766E] dark:text-[#5EEAD4]">Plumbing Co.</span>' +
+          '<a href="index.html" class="ff-brand group" aria-label="FlowFix Plumbing Co. home">' +
+            logoMark +
+            '<span>' +
+              '<span class="ff-brand-name group-hover:text-primary dark:group-hover:text-primary-light transition-colors">FlowFix</span>' +
+              '<span class="ff-brand-sub">Plumbing Co.</span>' +
             '</span>' +
           '</a>' +
 

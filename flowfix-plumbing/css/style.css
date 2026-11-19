@@ -27,6 +27,24 @@
   --ff-navbar-h: 4.5rem;
 }
 
+/* ---------- Layout container ----------
+   One shared container keeps the left/right gutter and content width
+   identical in the navbar, every page section, and the footer. */
+.ff-container {
+  width: 100%;
+  max-width: 88rem; /* matches the previous max-w-8xl */
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 640px) {
+  .ff-container { padding-inline: 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .ff-container { padding-inline: 2rem; }
+}
+
 /* ---------- Base ---------- */
 html {
   scroll-behavior: smooth;
@@ -174,6 +192,58 @@ html.dark body {
 .dark .pricing-table th {
   border-color: var(--ff-dark-border);
 }
+
+/* ---------- Brand / logo ---------- */
+.ff-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+}
+
+.ff-logo {
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.ff-logo-header {
+  inline-size: 2.25rem;
+  block-size: 2.25rem;
+}
+
+.ff-logo-footer {
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+}
+
+.ff-brand-name,
+.ff-brand-sub {
+  display: block;
+  font-family: 'Manrope', system-ui, sans-serif;
+  line-height: 1.1;
+}
+
+.ff-brand-name {
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ff-text);
+}
+
+.ff-brand-sub {
+  margin-top: 0.15rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ff-primary);
+}
+
+.dark .ff-brand-name { color: var(--ff-dark-text); }
+.dark .ff-brand-sub { color: #5EEAD4; }
+.site-footer .ff-brand-name { color: #fff; }
+.site-footer .ff-brand-sub { color: #5EEAD4; }
 
 /* ---------- Navbar ---------- */
 #navbar {
@@ -749,17 +819,59 @@ html.dark #theme-toggle .show-dark { display: block; }
   color: #FBBF24;
 }
 
-/* ---------- Hero ---------- */
-.hero-full {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-block: 3.5rem;
+/* ---------- Hero ----------
+   Every page uses the same responsive hero height so the first viewport
+   feels consistent when moving between pages. */
+.hero-section {
+  display: grid;
+  align-items: center;
+  min-height: 34rem;
 }
 
-.hero-full .hero-grid {
+.hero-section > .ff-container {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-section { min-height: 41rem; }
+}
+
+@media (min-width: 1024px) {
+  .hero-section { min-height: 42rem; }
+}
+
+/* Home 2: full-bleed photographic hero with an editorial overlay.
+   It intentionally does not use the two-column .hero-grid layout. */
+.hero-feature {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #0B5F59;
+}
+
+.hero-feature .eyebrow {
+  color: #5EEAD4;
+}
+
+.hero-feature-overlay {
+  background: radial-gradient(circle at center,
+      rgba(6, 46, 44, 0.9) 0%,
+      rgba(11, 95, 89, 0.76) 55%,
+      rgba(6, 46, 44, 0.58) 100%);
+}
+
+.hero-feature::after {
+  content: '';
+  position: absolute;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  top: -10rem;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(94, 234, 212, 0.22), transparent 68%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hero-grid {
@@ -772,17 +884,6 @@ html.dark #theme-toggle .show-dark { display: block; }
   .hero-grid {
     grid-template-columns: 1.05fr 0.95fr;
     gap: 3.5rem;
-  }
-
-  .hero-full .hero-grid {
-    align-items: stretch;
-    min-height: calc(100vh - 14rem);
-  }
-
-  .hero-full .hero-grid > div:first-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 }
 
@@ -880,6 +981,15 @@ html.dark #theme-toggle .show-dark { display: block; }
 }
 
 /* ---------- Service selector (Home 2) ---------- */
+.service-option-image {
+  display: block;
+  width: 100%;
+  height: 7.5rem;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  background: var(--ff-accent);
+}
+
 .service-option {
   cursor: pointer;
   text-align: start;
